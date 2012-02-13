@@ -1,0 +1,53 @@
+# depslib dependency file v1.0
+1327390427 source:d:\code\datastructures\src\queue.cpp
+	"Queue.h"
+
+1327382239 d:\code\datastructures\include\queue.h
+
+1328781200 source:d:\code\datastructures\src\stack.cpp
+	<iostream>
+	"Stack.h"
+	<cmath>
+
+1328783243 d:\code\datastructures\include\stack.h
+
+1328785187 source:d:\code\datastructures\main.cpp
+	<iostream>
+	<string.h>
+	"Sequence.h"
+	"LinkList.h"
+	"Stack.h"
+	"CustomString.h"
+	"Luxiaotong.h"
+
+1328784122 source:d:\code\datastructures\src\luxiaotong.cpp
+	"Luxiaotong.h"
+
+1328783720 d:\code\datastructures\include\luxiaotong.h
+	<iostream>
+
+1328781247 source:d:\code\datastructures\src\linklist.cpp
+	<iostream>
+	"LinkList.h"
+
+1328781230 d:\code\datastructures\include\linklist.h
+
+1328781049 source:d:\code\datastructures\src\sequence.cpp
+	"Sequence.h"
+	<iostream>
+
+1328781050 d:\code\datastructures\include\sequence.h
+
+1328782360 source:d:\code\datastructures\src\hstring.cpp
+	"HString.h"
+
+1328782271 d:\code\datastructures\include\hstring.h
+	<cstring>
+
+1328785166 source:d:\code\datastructures\src\customstring.cpp
+	"CustomString.h"
+
+1328783056 d:\code\datastructures\include\customstring.h
+	<iostream>
+	<cstring>
+
