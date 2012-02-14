@@ -1,275 +1,161 @@
 #include <iostream>
-#include <string.h>
-#include "Sequence.h"
-#include "LinkList.h"
+#include <cstring>
 #include "Stack.h"
-#include "CustomString.h"
 #include "Luxiaotong.h"
+#include "CustomString.h"
+typedef char * StringType;
+typedef int IntType;
 using namespace std;
 
+void Temp(int (&a)[10])
+{
+    for(int i = 0; i < 10; i++)
+        a[i] = i;
+    return;
+}
 
 int main()
 {
-    StringType s = new char[100];
-    StringType t        = new char[100];
-    CustomString cs;
-    Luxiaotong l;
-
-    l.Display("输入字符串1");
-    cin.getline(s, 100);
-    l.Display("输入字符串2");
-    cin.getline(t, 100);
-    cout << cs.StrCompare(s, t);
-    /*
-    //*****************KMP
-    char  str[100], mod[100];
-    int i, j, next[10], len1 = strlen(str), len2 = strlen(mod);
-    cout << "********************输入字符串********************" << endl;
-    cin >> str;
-    cout << "********************输入模式串********************" << endl;
-    cin >> mod;
-
-    //求next的值
-    i = -1;
-    j = 0;
-    next[0] = -1;
-    while(j < len2)
-    {
-        if(i == -1 || mod[i] == mod[j])
-        {
-            i ++;
-            j ++;
-            next[j] = i;
-        }
-        else
-        {
-            i = next[i];
-        }
-    }
-    //kmp
-    i = 0;
-    j = 0;
-    while(i < len1 && j < len2)
-    {
-        if(j == -1 || str[i] == mod[j])
-        {
-            i ++;
-            j ++;
-        }
-        else
-        {
-            j = next[j];
-        }
-    }
-    if(j == len2)   cout << "匹配成功" << endl;
-    else                cout << "匹配失败" << endl;
-    cout << "字符串: " << str << endl;
-    cout << "模式串: " << mod << endl;
-
-    //*****************3_27*********递归
-    Stack s;
-    cout << s.akm_3_27(1, 0) << endl;
-
-    //*****************3_26
-    Stack s;
-    cout << s.sqrt_3_26(9, 3, 1) << endl;
-
-    //******************3_25*******非递归
-    Stack s;
-    cout << s.F_3_25_2(4) << endl;
-
-    //******************3_25*******递归
-    Stack s;
-    cout << s.F_3_25(100) << endl;
-
-    //*******************3_24
-    Stack s;
-    s.g_3_24(5, 2);
-
-    //*******************3_21*********表达式求值
-    Stack s;
-    SqStack s1, s2;
-    Luxiaotong lux;
-    char data[100];
-    char x;
-    int i = 0;
-    s.InitStack(s1);
-    s.InitStack(s2);
-    s.Push(s1, '#');
-    cin.getline(data, 100);
-
-    while(1)
-    {
-        if(data[i] == '#')
-        {
-            if(s.GetTop(s1) == '#')
-                break;
-            else
-            {
-                while(s.GetTop(s1) != '#')
-                {
-                    //cout << "gettop: " << s1.GetTop(s1) << endl;
-                    s.Pop(s1, x);
-                    s.Push(s2, x);
-
-                }
-                break;
-            }
-        }
-
-        if(data[i] >= 'a' && data[i] <= 'z')
-        {
-            s.Push(s2, data[i]);
-            //cout << "char: " << data[i] << endl;
-        }
-        else
-        {
-            //cout << "operator: " << data[i] << endl;
-
-            //cout << s.GetTop(s1) << " " << data[i] << " "<< lux.Precede(s.GetTop(s1), data[i]) << endl;
-            //s.Push(s1, data[i]);
-
-            switch(lux.Precede(s.GetTop(s1), data[i]))
-            {
-                case '<' : s.Push(s1, data[i]); break;
-                case '>' :  while(lux.Precede(s.GetTop(s1), data[i]) == '>')
-                                {
-                                    s.Pop(s1, x);
-                                    s.Push(s2, x);
-                                }
-                                s.Push(s1, data[i]);
-                                break;
-                case '=' : s.Pop(s1, x); break;
-            }
-        }
-        s.StackTraverse(s1);
-        i++;
-    }
-    s.StackTraverse(s1);
-    s.StackTraverse(s2);
-
-    //*************************Josephus
-    int count = 0;
-    LinkList l;
-    LinkNode * p = new LinkNode;
-    LinkNode * tmp = new LinkNode;
-    p = l.ListInit3();
-    tmp = p;
-    //测试循环链表
-    for(int i = 0; i < 13; i++)
-    {
-        tmp = tmp->next;
-        cout << tmp->data << " ";
-    }
+    int a[10];
+    Temp(a);
+    for(int i = 0; i < 10; i++)
+        cout <<  a[i];
     cout << endl;
+    /*
+    StringType t = new char[10];
+    StringType s = new char[10];
+    CustomString cs;
+    cin.getline(s, 10);
+    cin.getline(t, 10);
+    cs.KMP(s, t);
 
-    while(tmp->next->data != tmp->data)
-    {
-        count ++;
-        if(count % 3 == 0)
-        {
-            cout << tmp->next->data << endl;
-            tmp->next = tmp->next->next;
-            continue;
-        }
-        tmp = tmp->next;
-    }
-    cout << tmp->data << endl;
+    StringType t = new char[10];
+    CustomString cs;
+    cin.getline(t, 10);
+    cout << cs.Reverse(t) << endl;
+
+    StringType t = new char[10];
+    CustomString cs;
+    cin.getline(t, 10);
+    cout << cs.SubString(t, 2, 5) << endl;
+
+    StringType t = new char[10];
+    StringType s = new char[10];
+    CustomString cs;
+    cin.getline(s, 10);
+    cin.getline(t, 10);
+    cout << cs.Concat(s, t) << endl;
+
+    StringType t = new char[10];
+    CustomString cs;
+    cin.getline(t, 10);
+    cout << cs.StrLength(t) << endl;
+    cout << strlen(t) << endl;
+
+    StringType t = new char[10];
+    StringType s = new char[10];
+    CustomString cs;
+    cin.getline(s, 10);
+    cin.getline(t, 10);
+    cout << cs.StrCompare(s, t) << endl;
+
+    StringType t = new char[2];
+    StringType s = new char[10];
+    CustomString cs;
+    cin.getline(s, 10);
+    cs.StrAssign(t, s);
+    cout << t << " " << strlen(t) << endl;
 
     //******************3_19
-    Stack s;
-    SqStack s1, s2;
-    s.InitStack(s1);
-    s.InitStack(s2);
+    Stack s, s1, s2;
+    s.InitStack(s);
+    s1.InitStack(s1);
     char x;
-    char *c = new char[100];
+    char *c  = new char[100];
     cin . getline(c, 100);
     for(int i = 0; i < strlen(c); i++)
     {
         if(*(c + i) == '[' || *(c + i) == ']' || *(c + i) == '(' || *(c + i) == ')' || *(c + i) == '{' || *(c + i) == '}')
-            s.Push(s1, *(c + i));
+            s.Push(s, *(c + i));
     }
-    while(s.StackEmpty(s1))
+    while(s.StackEmpty(s))
     {
-        s.Pop(s1, x);
+        s.Pop(s, x);
         if(x == '[' || x == '(' || x == '{')
-            s.Push(s2, x);
+            s1.Push(s1, x);
         if(x == ']' || x == ')' || x == '}')
         {
-            if(s.StackEmpty(s2))
+            if(s1.StackEmpty(s1))
                 cout << "the brackets in expresion is not match";
-            if(x == s1.GetTop(s2))
+            if(x == s1.GetTop(s1))
         }
     }
-
     //******************3_18
-    Stack s;
-    SqStack s1, s2, s3, s4, s5;
-    s.InitStack(s1);
-    s.InitStack(s2);
-    s.InitStack(s3);
-    s.InitStack(s4);
-    s.InitStack(s5);
+    Stack s1, s2, s3, s4, s5;
+    s1.InitStack(s1);
+    s2.InitStack(s2);
+    s2.InitStack(s3);
+    s2.InitStack(s4);
+    s2.InitStack(s5);
     char x;
     char *c  = new char[100];
     cin . getline(c, 100);
     for(int i = 0; i < strlen(c); i++)
     {
         //入栈
-        s.Push(s1, *(c + i));
+        s1.Push(s1, *(c + i));
     }
-    while(!s.StackEmpty(s1))
+    while(!s1.StackEmpty(s1))
     {
-        s.Pop(s1, x);
+        s1.Pop(s1, x);
         switch(x)
         {
-            case '(' : s.Push(s2, x);break;
-            case ')' : s.Push(s3, x);break;
-            case '[' : s.Push(s4, x);break;
-            case ']' : s.Push(s5, x);break;
+            case '(' : s2.Push(s2, x);break;
+            case ')' : s3.Push(s3, x);break;
+            case '[' : s4.Push(s4, x);break;
+            case ']' : s5.Push(s5, x);break;
         }
     }
-    if(!s.StackEmpty(s1))
-        s.StackTraverse(s1);
-    if(!s.StackEmpty(s2))
-        s.StackTraverse(s2);
-    if(!s.StackEmpty(s3))
-        s.StackTraverse(s3);
-    if(!s.StackEmpty(s4))
-        s.StackTraverse(s4);
-    if(!s.StackEmpty(s5))
-        s.StackTraverse(s5);
-    if(s.StackLength(s2) == s.StackLength(s3))
+    if(!s1.StackEmpty(s1))
+        s1.StackTraverse(s1);
+    if(!s2.StackEmpty(s2))
+        s2.StackTraverse(s2);
+    if(!s3.StackEmpty(s3))
+        s3.StackTraverse(s3);
+    if(!s4.StackEmpty(s4))
+        s4.StackTraverse(s4);
+    if(!s5.StackEmpty(s5))
+        s5.StackTraverse(s5);
+    if(s2.StackLength(s2) == s3.StackLength(s3))
         cout << "'(' is equal to ')'" << endl;
     else
         cout << "'(' is not equal to ')'" << endl;
-    if(s.StackLength(s4) == s.StackLength(s5))
+    if(s4.StackLength(s4) == s5.StackLength(s5))
         cout << "'[' is equal to ']'" << endl;
     else
         cout << "'[' is not equal to ']'" << endl;
 
     ///***********************3_17
-    Stack s;
-    SqStack s1,s2;
-    s.InitStack(s1);
-    s.InitStack(s2);
+    Stack s,s1;
+    s.InitStack(s);
+    s1.InitStack(s1);
     char x, x1;
     //输入一串字符并入栈
     cin >> x;
     while(x != '@')
     {
         if(x != ' ')
-            s.Push(s1, x);
+            s.Push(s, x);
         cin >> x;
     }
-    s.StackTraverse(s1);
+    s.StackTraverse(s);
     //挨个出栈s并入栈s1直到遇见‘&’
-    s.Pop(s1, x);
+    s.Pop(s, x);
     while(x != '&')
     {
-        s.Push(s2, x);
-        s.Pop(s1, x);
-        if(s.StackEmpty(s1) || s1.StackEmpty(s2))
+        s1.Push(s1, x);
+        s.Pop(s, x);
+        if(s.StackEmpty(s) || s1.StackEmpty(s1))
         {
             cout << "no" << endl;
             return 0;
@@ -278,17 +164,17 @@ int main()
     //栈s和s1逐个Pop并比较
     while(1)
     {
-        s.Pop(s1, x);
-        s.Pop(s2, x1);
+        s.Pop(s, x);
+        s1.Pop(s1, x1);
         if(x == x1)
         {
-            if(s.StackEmpty(s1) && s.StackEmpty(s2))
+            if(s.StackEmpty(s) && s1.StackEmpty(s1))
             {
                 cout << "yes" << endl;
                 break;
                 return 0;
             }
-            else if(s.StackEmpty(s1) && !s.StackEmpty(s2) || !s.StackEmpty(s1) && s.StackEmpty(s2))
+            else if(s.StackEmpty(s) && !s1.StackEmpty(s1) || !s.StackEmpty(s) && s1.StackEmpty(s1))
             {
                 cout << "no" << endl;
                 break;
@@ -308,32 +194,31 @@ int main()
     ////////////////////////3_16
     int x;
     int arr[10] = {5,5,6,6,5,6,5,6,6,5};
-    Stack s;
-    SqStack s1, s5, s6;
-    s . InitStack(s1);
-    s . InitStack(s5);
-    s . InitStack(s6);
+    Stack s, s5, s6;
+    s . InitStack(s);
+    s5 . InitStack(s5);
+    s6 . InitStack(s6);
     for(int i = 0; i < 10; i++)
-        s . Push(s1, arr[i]);
-    while(!s.StackEmpty(s1))
+        s . Push(s, arr[i]);
+    while(!s.StackEmpty(s))
     {
-        s . Pop(s1, x);
+        s . Pop(s, x);
         if(x == 5)
-            s.Push(s5, x);
+            s5.Push(s5, x);
         if(x == 6)
-            s.Push(s6, x);
+            s6.Push(s6, x);
     }
     while(!s.StackEmpty(s5))
     {
-        s.Pop(s5, x);
-        s.Push(s1, x);
+        s5.Pop(s5, x);
+        s.Push(s, x);
     }
     while(!s.StackEmpty(s6))
     {
-        s.Pop(s6, x);
-        s.Push(s1, x);
+        s6.Pop(s6, x);
+        s.Push(s, x);
     }
-    s.StackTraverse(s1);
+    s.StackTraverse(s);
 
     //******************2_30
     LinkList l;
@@ -376,16 +261,16 @@ int main()
     cout << "insert the data to pa:" << endl;
     while(1)
     {
-        cin >> data;
-        if(data == -1) break;
-        pa = l.Insert(pa, data);
+    cin >> data;
+    if(data == -1) break;
+    pa = l.Insert(pa, data);
     }
     cout << "insert the data to pb:" << endl;
     while(1)
     {
-        cin >>data;
-        if(data == -1) break;
-        pb = l.Insert(pb, data);
+    cin >>data;
+    if(data == -1) break;
+    pb = l.Insert(pb, data);
     }
 
     pa = l.ListInit();
