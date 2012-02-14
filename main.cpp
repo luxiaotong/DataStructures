@@ -16,12 +16,16 @@ void Temp(int (&a)[10])
 
 int main()
 {
+<<<<<<< HEAD
     int a[10];
     Temp(a);
     for(int i = 0; i < 10; i++)
         cout <<  a[i];
     cout << endl;
     /*
+=======
+    //this is about kmp algorithm
+>>>>>>> origin/master
     StringType t = new char[10];
     StringType s = new char[10];
     CustomString cs;
@@ -102,7 +106,7 @@ int main()
     cin . getline(c, 100);
     for(int i = 0; i < strlen(c); i++)
     {
-        //ÈëÕ»
+        //ï¿½ï¿½Õ»
         s1.Push(s1, *(c + i));
     }
     while(!s1.StackEmpty(s1))
@@ -140,7 +144,7 @@ int main()
     s.InitStack(s);
     s1.InitStack(s1);
     char x, x1;
-    //ÊäÈëÒ»´®×Ö·û²¢ÈëÕ»
+    //ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½Õ»
     cin >> x;
     while(x != '@')
     {
@@ -149,7 +153,7 @@ int main()
         cin >> x;
     }
     s.StackTraverse(s);
-    //°¤¸ö³öÕ»s²¢ÈëÕ»s1Ö±µ½Óö¼û¡®&¡¯
+    //ï¿½ï¿½ï¿½ï¿½ï¿½Õ»sï¿½ï¿½ï¿½ï¿½Õ»s1Ö±ï¿½ï¿½ï¿½ï¿½ï¿½&ï¿½ï¿½
     s.Pop(s, x);
     while(x != '&')
     {
@@ -161,7 +165,7 @@ int main()
             return 0;
         }
     }
-    //Õ»sºÍs1Öð¸öPop²¢±È½Ï
+    //Õ»sï¿½ï¿½s1ï¿½ï¿½ï¿½Popï¿½ï¿½ï¿½È½ï¿½
     while(1)
     {
         s.Pop(s, x);
