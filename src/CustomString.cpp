@@ -96,14 +96,15 @@ StringType CustomString :: Reverse(StringType s)
     tmp[i] = '\0';
     return tmp;
 }
-/*
-void CustomString :: getNext(StringType s, IntType (&next)[10])
+
+void CustomString :: getNext(StringType t, IntType (&next)[10])
 {
+    memset(next, 0, sizeof(next));
     int i = -1, j = 0;
     next[0] = -1;
-    while(j < StrLength(s))
+    while(j < StrLength(t))
     {
-        if(i == -1 || s[i] == s[j])
+        if(i == -1 || t[i] == t[j])
         {
             i ++;
             j ++;
@@ -114,29 +115,14 @@ void CustomString :: getNext(StringType s, IntType (&next)[10])
     }
 
 }
-*/
-void CustomString :: KMP(StringType s, StringType t)
+
+bool CustomString :: KMP(StringType s, StringType t)
 {
     //getNext
-    int i = -1, j = 0, next[10];
-    int len1 = StrLength(s), len2 = StrLength(t);
-    next[0] = -1;
-    while(j < len2)
-    {
-        if(i == -1 || t[i] == t[j])
-        {
-            i ++;
-            j ++;
-            next[j] = i;
-        }
-        else
-        {
-        i = next[i];
-        }
-    }
+   IntType next[10];
+   getNext(t, next);
     //kmp
-    i = 0;
-    j = 0;
+    int i = 0, j = 0, len1 = StrLength(s), len2 = StrLength(t);
     while(i < len1 && j < len2)
     {
         if(j == -1 || s[i] == t[j])

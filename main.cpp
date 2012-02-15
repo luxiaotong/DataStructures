@@ -12,10 +12,11 @@ int main()
     //this is about kmp algorithm
     StringType t = new char[10];
     StringType s = new char[10];
+    IntType next[10];
     CustomString cs;
     cin.getline(s, 10);
     cin.getline(t, 10);
-    cs.KMP(s, t);
+    cout << cs.KMP(s, t) << endl;
     /*
     StringType t = new char[10];
     CustomString cs;
