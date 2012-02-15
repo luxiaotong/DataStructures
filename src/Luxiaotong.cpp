@@ -15,40 +15,22 @@ IntType Luxiaotong :: Precede(IntType tmp1, IntType tmp2)
     switch(tmp1)
     {
         case '+' : key1 = 0; break;
-<<<<<<< HEAD
-        case '-'  : key1 = 1; break;
-        case '*'  : key1 = 2; break;
-        case '/'  : key1 = 3; break;
-        case '('  : key1 = 4; break;
-        case ')'  : key1 = 5; break;
-        case '#'  : key1 = 6; break;
-=======
         case '-' : key1 = 1; break;
         case '*' : key1 = 2; break;
         case '/' : key1 = 3; break;
         case '(' : key1 = 4; break;
         case ')' : key1 = 5; break;
         case '#' : key1 = 6; break;
->>>>>>> ed7b7a031090c2300290dcf05c784efd8228439a
     }
     switch(tmp2)
     {
         case '+' : key2 = 0; break;
-<<<<<<< HEAD
-        case '-'  : key2 = 1; break;
-        case '*'  : key2 = 2; break;
-        case '/'  : key2 = 3; break;
-        case '('  : key2 = 4; break;
-        case ')'  : key2 = 5; break;
-        case '#'  : key2 = 6; break;
-=======
         case '-' : key2 = 1; break;
         case '*' : key2 = 2; break;
         case '/' : key2 = 3; break;
         case '(' : key2 = 4; break;
         case ')' : key2 = 5; break;
         case '#' : key2 = 6; break;
->>>>>>> ed7b7a031090c2300290dcf05c784efd8228439a
     }
     return arr[key1][key2];
 }

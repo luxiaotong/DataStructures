@@ -237,13 +237,8 @@ LinkNode * LinkList :: Duplication_29(LinkNode * link_a, LinkNode * link_b, Link
             }
             pa->next = pa->next->next;
             tmp = pa->next;
-<<<<<<< HEAD
-            pb   = pb->next;
-            pc   = pc->next;
-=======
             pb = pb->next;
             pc = pc->next;
->>>>>>> ed7b7a031090c2300290dcf05c784efd8228439a
         }
         else if(tmp->data < pb->data || tmp->data < pc->data)
         {
