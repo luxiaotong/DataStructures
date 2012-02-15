@@ -15,4 +15,7 @@ class Sequence
 };
 
 #endif // SEQUENCE_H
+<<<<<<< HEAD
 
+=======
+>>>>>>> ed7b7a031090c2300290dcf05c784efd8228439a

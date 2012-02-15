@@ -1,5 +1,6 @@
 #include<iostream>
 #include "Stack.h"
+<<<<<<< HEAD
 #include <cmath>
 using namespace std;
 
@@ -8,6 +9,15 @@ bool Stack :: Push(SqStack &s, IntType x)
     if(s . top - s . base >= s . stacksize)
     {
         s . base = new IntType[STACK_INIT_SIZE + STACKINCREAMENT];
+=======
+using namespace std;
+
+bool Stack :: Push(Stack &s, CharType x)
+{
+    if(s . top - s . base >= s . stacksize)
+    {
+        s . base = new CharType[STACK_INIT_SIZE + STACKINCREAMENT];
+>>>>>>> ed7b7a031090c2300290dcf05c784efd8228439a
         s . top = s . base + s . stacksize;
         s . stacksize += STACKINCREAMENT;
     }
@@ -15,13 +25,18 @@ bool Stack :: Push(SqStack &s, IntType x)
     s . top = s . top + 1;
     return true;
 }
+<<<<<<< HEAD
 bool Stack :: Pop(SqStack &s, IntType &x)
+=======
+bool Stack :: Pop(Stack &s, CharType &x)
+>>>>>>> ed7b7a031090c2300290dcf05c784efd8228439a
 {
     if(s . top == s . base) return -1;
     x = *(s . top - 1);
     s . top = s . top - 1;
     return true;
 }
+<<<<<<< HEAD
 IntType Stack :: GetTop(SqStack s)
 {
     IntType x;
@@ -35,18 +50,38 @@ int Stack :: StackLength(SqStack s)
 void Stack :: InitStack(SqStack &s)
 {
     s . base = new IntType[STACK_INIT_SIZE];
+=======
+CharType Stack :: GetTop(Stack s)
+{
+    CharType x;
+    x = *(s . top - 1);
+    return x;
+}
+int Stack :: StackLength(Stack s)
+{
+    return s . top - s . base;
+}
+void Stack :: InitStack(Stack &s)
+{
+    s . base = new CharType[STACK_INIT_SIZE];
+>>>>>>> ed7b7a031090c2300290dcf05c784efd8228439a
     //if(!s.base) exit(OVERFLOW);
     s . top = s . base;
     s . stacksize = STACK_INIT_SIZE;
     return;
 }
+<<<<<<< HEAD
 bool Stack :: StackEmpty(SqStack s)
+=======
+bool Stack :: StackEmpty(Stack s)
+>>>>>>> ed7b7a031090c2300290dcf05c784efd8228439a
 {
     if(s . top == s . base)
         return true;
     else
         return false;
 }
+<<<<<<< HEAD
 bool Stack :: ClearStack(SqStack &s)
 {
     IntType x;
@@ -59,6 +94,20 @@ bool Stack :: ClearStack(SqStack &s)
 bool Stack :: StackTraverse(SqStack s)
 {
     IntType *tmp = s . base;
+=======
+bool Stack :: ClearStack(Stack &s)
+{
+    CharType x;
+    while(!s . StackEmpty(s))
+    {
+        s . Pop(s, x);
+    }
+    return true;
+}
+bool Stack :: StackTraverse(Stack s)
+{
+    CharType *tmp = s . base;
+>>>>>>> ed7b7a031090c2300290dcf05c784efd8228439a
     while(tmp != s . top)
     {
         cout << *tmp << " ";
@@ -67,6 +116,7 @@ bool Stack :: StackTraverse(SqStack s)
     cout << endl;
     return true;
 }
+<<<<<<< HEAD
 //实现3.24题中得函数g(m, n)
 int Stack :: g_3_24(int m, int n)
 {
@@ -134,3 +184,5 @@ int Stack :: akm_3_27(int m, int n)
         akm_3_27(m - 1, akm_3_27(m, n - 1));
 }
 
+=======
+>>>>>>> ed7b7a031090c2300290dcf05c784efd8228439a

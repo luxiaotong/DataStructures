@@ -26,4 +26,8 @@ class LinkList
         LinkNode * Intersect(LinkNode * link_a, LinkNode *link_b);
         LinkNode * Duplication_29(LinkNode * link_a, LinkNode * link_b, LinkNode * link_c);
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> ed7b7a031090c2300290dcf05c784efd8228439a
 #endif // LINKLIST_H
