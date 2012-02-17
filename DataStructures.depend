@@ -10,7 +10,7 @@
 
 1329174926 d:\code\datastructures\include\stack.h
 
-1329299874 source:d:\code\datastructures\main.cpp
+1329461717 source:d:\code\datastructures\main.cpp
 	<iostream>
 	<cstring>
 	"Stack.h"
@@ -23,10 +23,10 @@
 1329174926 d:\code\datastructures\include\luxiaotong.h
 	<iostream>
 
-1329299855 source:d:\code\datastructures\src\customstring.cpp
+1329462501 source:d:\code\datastructures\src\customstring.cpp
 	"CustomString.h"
 
-1329299609 d:\code\datastructures\include\customstring.h
+1329461602 d:\code\datastructures\include\customstring.h
 	<iostream>
 	<cstring>
 

@@ -116,6 +116,7 @@ void CustomString :: getNext(StringType t, IntType (&next)[10])
 
 }
 
+//kmp算法
 bool CustomString :: KMP(StringType s, StringType t)
 {
     //getNext
@@ -139,6 +140,34 @@ bool CustomString :: KMP(StringType s, StringType t)
     else return 0;
     return 0;
 }
+
+//kmp改进算法 能返回匹配的字符串的坐标
+bool CustomString :: KMPImprove(StringType s, StringType t)
+{
+    //getNext
+   IntType next[10], startPos = -1;
+   getNext(t, next);
+    //kmp
+    int i = 0, j = 0, len1 = StrLength(s), len2 = StrLength(t);
+    while(i < len1 && j < len2)
+    {
+        if(j == -1 || s[i] == t[j])
+        {
+            if(startPos == -1)  startPos = i;
+            i ++;
+            j ++;
+        }
+        else
+        {
+            j = next[j];
+            startPos = -1;
+        }
+    }
+    if(j == len2) { cout << "start posion : " << startPos << endl; return 1; }
+    else return 0;
+    return 0;
+}
+
 void CustomString :: Replace(StringType &s, StringType t, StringType v)
 {
     int start = 0, end = 0;

@@ -16,7 +16,7 @@ int main()
     CustomString cs;
     cin.getline(s, 10);
     cin.getline(t, 10);
-    cout << cs.KMP(s, t) << endl;
+    cout << cs.KMPImprove(s, t) << endl;
     /*
     StringType t = new char[10];
     CustomString cs;
