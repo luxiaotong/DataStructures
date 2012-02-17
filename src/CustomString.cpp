@@ -97,12 +97,12 @@ StringType CustomString :: Reverse(StringType s)
     return tmp;
 }
 
-void CustomString :: getNext(StringType t, IntType (&next)[10])
+void CustomString :: getNext(StringType t, IntType (&next)[MAXSIZE])
 {
     memset(next, 0, sizeof(next));
     int i = -1, j = 0;
     next[0] = -1;
-    while(j < StrLength(t))
+    while(j < StrLength(t) - 1)
     {
         if(i == -1 || t[i] == t[j])
         {
@@ -113,14 +113,20 @@ void CustomString :: getNext(StringType t, IntType (&next)[10])
         else
             i = next[i];
     }
-
+    Luxiaotong l;
+    l.Display("输出next数组");
+    for(i = 0; i < sizeof(next) / sizeof(int); i++)
+        cout << next[i] << " ";
+    cout << endl;
+    l.Display("输出next数组");
+    return;
 }
 
 //kmp算法
 bool CustomString :: KMP(StringType s, StringType t)
 {
     //getNext
-   IntType next[10];
+   IntType next[MAXSIZE];
    getNext(t, next);
     //kmp
     int i = 0, j = 0, len1 = StrLength(s), len2 = StrLength(t);
