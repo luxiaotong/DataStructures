@@ -18,7 +18,6 @@ class CustomString
         void Replace(StringType &s, StringType t, StringType v);
         void getNext(StringType s, IntType (&next) [10]);
         bool KMP(StringType s, StringType t);
-        bool KMPImprove(StringType s, StringType t);
 };
 
 #endif // CUSTOMSTRING_H
