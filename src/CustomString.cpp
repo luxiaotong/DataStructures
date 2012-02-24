@@ -149,6 +149,24 @@ bool CustomString :: KMP(StringType s, StringType t)
 
 void CustomString :: Replace(StringType &s, StringType t, StringType v)
 {
-    int start = 0, end = 0;
+    int i = 0, j = 0, k = 0;
+    int len1 = StrLength(s);
+    int len2 = StrLength(t);
+    int len3 = StrLength(v);
+    for(i = 0; i < len1; i ++)
+    {
+        j = i;
+        for(k = 0; k < len2; k ++)
+        {
+            if(s[j] == t[k])
+            {
+                if(k == len2 -1)
+                    cout << "yes" << endl;
+                j ++;
+            }
+            else    break;
+        }
+    }
+    cout << "no" << endl;
     return;
 }

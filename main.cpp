@@ -17,7 +17,7 @@ int main()
     CustomString cs;
     cin.getline(s, MAXSIZE);
     cin.getline(t, MAXSIZE);
-    cout << cs.KMP(s, t) << endl;
+    cs.Replace(s, t, "");
     /*
     StringType t = new char[10];
     CustomString cs;
