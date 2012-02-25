@@ -2,8 +2,10 @@
 #define CUSTOMSTRING_H
 typedef char * StringType;
 typedef int IntType;
+#define MAXSIZE 100
 #include <iostream>
 #include <cstring>
+#include <Luxiaotong.h>
 using namespace std;
 
 class CustomString
@@ -15,8 +17,9 @@ class CustomString
         StringType Concat(StringType s, StringType t);
         StringType SubString(StringType s, int start, int len);
         StringType Reverse(StringType s);
+        void replaceByPos(StringType &s, int start, int end, StringType v);
         void Replace(StringType &s, StringType t, StringType v);
-        void getNext(StringType s, IntType (&next) [10]);
+        void getNext(StringType s, IntType (&next) [MAXSIZE]);
         bool KMP(StringType s, StringType t);
 };
 

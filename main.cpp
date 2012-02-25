@@ -5,18 +5,25 @@
 #include "CustomString.h"
 typedef char * StringType;
 typedef int IntType;
+#define MAXSIZE 100
 using namespace std;
 
 int main()
 {
-    //this is about kmp algorithm
-    StringType t = new char[10];
-    StringType s = new char[10];
-    IntType next[10];
+
+    StringType s = new char[MAXSIZE];
+    StringType t = new char[MAXSIZE];
+    StringType v = new char[MAXSIZE];
+    Luxiaotong l;
     CustomString cs;
-    cin.getline(s, 10);
-    cin.getline(t, 10);
-    cout << cs.KMP(s, t) << endl;
+    l.Display("输入字符串s:");
+    cin.getline(s, MAXSIZE);
+    l.Display("输入字符串t:");
+    cin.getline(t, MAXSIZE);
+    l.Display("输入字符串v:");
+    cin.getline(v, MAXSIZE);
+    cs.Replace(s, t, v);
+    l.Display(s);
     /*
     StringType t = new char[10];
     CustomString cs;

@@ -1,44 +1,45 @@
 # depslib dependency file v1.0
-1329174926 source:d:\code\datastructures\src\queue.cpp
+1327390427 source:d:\code\datastructures\src\queue.cpp
 	"Queue.h"
 
-1329174926 d:\code\datastructures\include\queue.h
+1327382239 d:\code\datastructures\include\queue.h
 
-1329174926 source:d:\code\datastructures\src\stack.cpp
+1329141459 source:d:\code\datastructures\src\stack.cpp
 	<iostream>
 	"Stack.h"
 
-1329174926 d:\code\datastructures\include\stack.h
+1329141432 d:\code\datastructures\include\stack.h
 
-1329299874 source:d:\code\datastructures\main.cpp
+1330177679 source:d:\code\datastructures\main.cpp
 	<iostream>
 	<cstring>
 	"Stack.h"
 	"Luxiaotong.h"
 	"CustomString.h"
 
-1329174926 source:d:\code\datastructures\src\luxiaotong.cpp
+1329141974 source:d:\code\datastructures\src\luxiaotong.cpp
 	"Luxiaotong.h"
 
-1329174926 d:\code\datastructures\include\luxiaotong.h
+1329141938 d:\code\datastructures\include\luxiaotong.h
 	<iostream>
 
-1329299855 source:d:\code\datastructures\src\customstring.cpp
+1330180137 source:d:\code\datastructures\src\customstring.cpp
 	"CustomString.h"
 
-1329299609 d:\code\datastructures\include\customstring.h
+1330172307 d:\code\datastructures\include\customstring.h
 	<iostream>
 	<cstring>
+	<Luxiaotong.h>
 
-1329174926 source:d:\code\datastructures\src\linklist.cpp
+1329141771 source:d:\code\datastructures\src\linklist.cpp
 	<iostream>
 	"LinkList.h"
 
-1329174926 d:\code\datastructures\include\linklist.h
+1329141740 d:\code\datastructures\include\linklist.h
 
-1329174926 source:d:\code\datastructures\src\sequence.cpp
+1329141618 source:d:\code\datastructures\src\sequence.cpp
 	"Sequence.h"
 	<iostream>
 
-1329174926 d:\code\datastructures\include\sequence.h
+1329141582 d:\code\datastructures\include\sequence.h
 
