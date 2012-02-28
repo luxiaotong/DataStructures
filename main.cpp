@@ -3,13 +3,30 @@
 #include "Stack.h"
 #include "Luxiaotong.h"
 #include "CustomString.h"
-typedef char * StringType;
-typedef int IntType;
-#define MAXSIZE 100
+//typedef char * StringType;
+//typedef int IntType;
+//#define MAXSIZE 100
 using namespace std;
 
 int main()
 {
+    StringType s = new char[MAXSIZE];
+    StringType t = new char[MAXSIZE];
+    Luxiaotong l;
+    CustomString cs;
+    l.Display("输入字符串s:");
+    cin.getline(s, MAXSIZE);
+    l.Display("输入字符串t:");
+    cin.getline(t, MAXSIZE);
+    cs.DelString(s, t);
+    l.Display(s);
+    /*
+    StringType s = new char[MAXSIZE];
+    Luxiaotong l;
+    CustomString cs;
+    l.Display("输入字符串s:");
+    cin.getline(s, MAXSIZE, '^');
+    cs.KindOfChar(s);
 
     StringType s = new char[MAXSIZE];
     StringType t = new char[MAXSIZE];
@@ -24,7 +41,7 @@ int main()
     cin.getline(v, MAXSIZE);
     cs.Replace(s, t, v);
     l.Display(s);
-    /*
+
     StringType t = new char[10];
     CustomString cs;
     cin.getline(t, 10);
