@@ -4,29 +4,32 @@
 
 1327382239 d:\code\datastructures\include\queue.h
 
-1329141459 source:d:\code\datastructures\src\stack.cpp
+1331390928 source:d:\code\datastructures\src\stack.cpp
 	<iostream>
 	"Stack.h"
 
-1329141432 d:\code\datastructures\include\stack.h
+1331391172 d:\code\datastructures\include\stack.h
+	"Global.h"
 
-1330437867 source:d:\code\datastructures\main.cpp
+1331478547 source:d:\code\datastructures\main.cpp
 	<iostream>
 	<cstring>
+	"Global.h"
 	"Stack.h"
 	"Luxiaotong.h"
-	"CustomString.h"
+	"BiTree.h"
 
-1330180295 source:d:\code\datastructures\src\luxiaotong.cpp
+1331384457 source:d:\code\datastructures\src\luxiaotong.cpp
 	"Luxiaotong.h"
 
-1329141938 d:\code\datastructures\include\luxiaotong.h
+1331372812 d:\code\datastructures\include\luxiaotong.h
+	"Global.h"
 	<iostream>
 
 1330438338 source:d:\code\datastructures\src\customstring.cpp
 	"CustomString.h"
 
-1330425890 d:\code\datastructures\include\customstring.h
+1331372466 d:\code\datastructures\include\customstring.h
 	<iostream>
 	<cstring>
 	<Luxiaotong.h>
@@ -35,11 +38,23 @@
 	<iostream>
 	"LinkList.h"
 
-1329141740 d:\code\datastructures\include\linklist.h
+1331372830 d:\code\datastructures\include\linklist.h
+	"Global.h"
 
 1329141618 source:d:\code\datastructures\src\sequence.cpp
 	"Sequence.h"
 	<iostream>
 
 1329141582 d:\code\datastructures\include\sequence.h
+
+1331478520 source:d:\code\datastructures\src\bitree.cpp
+	"BiTree.h"
+
+1331391124 d:\code\datastructures\include\bitree.h
+	"Global.h"
+	"Stack.h"
+	<iostream>
+	<cstring>
+
+1331391078 d:\code\datastructures\include\global.h
 

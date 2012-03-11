@@ -2,11 +2,11 @@
 #include "Stack.h"
 using namespace std;
 
-bool Stack :: Push(Stack &s, CharType x)
+bool Stack :: Push(Stack &s, StackType x)
 {
     if(s . top - s . base >= s . stacksize)
     {
-        s . base = new CharType[STACK_INIT_SIZE + STACKINCREAMENT];
+        s . base = new StackType[STACK_INIT_SIZE + STACKINCREAMENT];
         s . top = s . base + s . stacksize;
         s . stacksize += STACKINCREAMENT;
     }
@@ -14,16 +14,16 @@ bool Stack :: Push(Stack &s, CharType x)
     s . top = s . top + 1;
     return true;
 }
-bool Stack :: Pop(Stack &s, CharType &x)
+bool Stack :: Pop(Stack &s, StackType &x)
 {
     if(s . top == s . base) return -1;
     x = *(s . top - 1);
     s . top = s . top - 1;
     return true;
 }
-CharType Stack :: GetTop(Stack s)
+StackType Stack :: GetTop(Stack s)
 {
-    CharType x;
+    StackType x;
     x = *(s . top - 1);
     return x;
 }
@@ -33,7 +33,7 @@ int Stack :: StackLength(Stack s)
 }
 void Stack :: InitStack(Stack &s)
 {
-    s . base = new CharType[STACK_INIT_SIZE];
+    s . base = new StackType[STACK_INIT_SIZE];
     //if(!s.base) exit(OVERFLOW);
     s . top = s . base;
     s . stacksize = STACK_INIT_SIZE;
@@ -48,7 +48,7 @@ bool Stack :: StackEmpty(Stack s)
 }
 bool Stack :: ClearStack(Stack &s)
 {
-    CharType x;
+    StackType x;
     while(!s . StackEmpty(s))
     {
         s . Pop(s, x);
@@ -57,7 +57,7 @@ bool Stack :: ClearStack(Stack &s)
 }
 bool Stack :: StackTraverse(Stack s)
 {
-    CharType *tmp = s . base;
+    StackType *tmp = s . base;
     while(tmp != s . top)
     {
         cout << *tmp << " ";

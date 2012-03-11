@@ -33,13 +33,16 @@
 			<Add option="-fexceptions" />
 			<Add directory="D:\code\DataStructures\include" />
 		</Compiler>
+		<Unit filename="include\BiTree.h" />
 		<Unit filename="include\CustomString.h" />
+		<Unit filename="include\Global.h" />
 		<Unit filename="include\LinkList.h" />
 		<Unit filename="include\Luxiaotong.h" />
 		<Unit filename="include\Queue.h" />
 		<Unit filename="include\Sequence.h" />
 		<Unit filename="include\Stack.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src\BiTree.cpp" />
 		<Unit filename="src\CustomString.cpp" />
 		<Unit filename="src\LinkList.cpp" />
 		<Unit filename="src\Luxiaotong.cpp" />

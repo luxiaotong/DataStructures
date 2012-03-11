@@ -1,8 +1,8 @@
 #ifndef CUSTOMSTRING_H
 #define CUSTOMSTRING_H
-typedef char * StringType;
-typedef int IntType;
-#define MAXSIZE 10000
+//typedef char * StringType;
+//typedef int IntType;
+//#define MAXSIZE 10000
 #include <iostream>
 #include <cstring>
 #include <Luxiaotong.h>

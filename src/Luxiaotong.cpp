@@ -40,6 +40,8 @@ void Luxiaotong :: Display(StringType prompt)
 {
     if(!prompt)
         cout << "display error!" << endl;
-    else
+    else {
+        cout << endl;
         cout << "==========" << prompt << "==========" << endl;
+    }
 }

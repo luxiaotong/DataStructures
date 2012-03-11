@@ -1,6 +1,6 @@
 #ifndef LINKLIST_H
 #define LINKLIST_H
-typedef int IntType;
+#include "Global.h"
 
 class LinkNode
 {

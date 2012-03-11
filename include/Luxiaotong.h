@@ -1,11 +1,12 @@
 #ifndef LUXIAOTONG_H
 #define LUXIAOTONG_H
+#include "Global.h"
 #include <iostream>
 using namespace std;
 
-typedef int IntType;
-typedef char CharType;
-typedef char * StringType;
+//typedef int IntType;
+//typedef char CharType;
+//typedef char * StringType;
 
 class Luxiaotong
 {

@@ -1,15 +1,37 @@
 #include <iostream>
 #include <cstring>
+using namespace std;
+#include "Global.h"
 #include "Stack.h"
 #include "Luxiaotong.h"
-#include "CustomString.h"
-//typedef char * StringType;
-//typedef int IntType;
-//#define MAXSIZE 100
-using namespace std;
+//#include "CustomString.h"
+#include "BiTree.h"
+
 
 int main()
 {
+    BiTNode * T = NULL;
+    BiTree bt;
+    Luxiaotong l;
+    T = bt.CreateBiTree();
+    //bt.PreOrderTraverseNoRec(T);
+    //bt.InOrderTraverseNoRec(T);
+    bt.PostOrderTraverseNoRec(T);
+    //cout << T->data << endl;
+    //cout << T->lchild->data << endl;
+    //cout << T->rchild->data << endl;
+    /*
+    BiTNode * T = NULL;
+    BiTree bt;
+    Luxiaotong l;
+    T = bt.CreateBiTree();
+    l.Display("先序");
+    bt.PreOrderTraverse(T);
+    l.Display("中序");
+    bt.InOrderTraverse(T);
+    l.Display("后序");
+    bt.PostOrderTraverse(T);
+
     StringType s = new char[MAXSIZE];
     StringType t = new char[MAXSIZE];
     Luxiaotong l;
@@ -20,7 +42,7 @@ int main()
     cin.getline(t, MAXSIZE);
     cs.DelString(s, t);
     l.Display(s);
-    /*
+
     StringType s = new char[MAXSIZE];
     Luxiaotong l;
     CustomString cs;
