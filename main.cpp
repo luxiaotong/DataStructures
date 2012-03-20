@@ -1,26 +1,96 @@
 #include <iostream>
-#include <cstring>
 using namespace std;
 #include "Global.h"
-#include "Stack.h"
 #include "Luxiaotong.h"
-//#include "CustomString.h"
 #include "BiTree.h"
 
 
 int main()
 {
+    char data[MAXSIZE];
+    FILE *fp = fopen("D:\\Program Files\\EasyPHP-5.3.5.0\\php\\php.ini-development", "r");
+    fread(data, sizeof(char), MAXSIZE, fp);
+    fclose(fp);
+    BiTree bt;
+    BSTNode * T = NULL;
+    bt.BSTInsert(T, data);
+    bt.BSTDisplay(T);
+    //BiTNode * T = bt.CreateBiTreePreOrder();
+    //bt.LevelOrderTraverse(T);
+    //cout << T->data << endl;
+    //cout << T->lchild << endl;
+    //cout << T->rchild << endl;
+    /*
+    BiTNode * T = NULL;
+    BiTree bt;
+    int count = 0;
+    T = bt.CreateBiTree();
+    bt.LevelOrderTraverse(T);
+    bt.CountLeaf(T, count);
+    cout << endl << count << endl;
+
+    BiTNode * T = NULL;
+    BiTree bt;
+    Luxiaotong l;
+    T = bt.CreateBiTree();
+    bt.LevelOrderTraverse(T);
+    cout << endl;
+    bt.SwapTree(T);
+    bt.LevelOrderTraverse(T);
+
+    int ancestor, offspring, i;
+    int T[] = {0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7};
+    Luxiaotong l;
+    queue<int>q;
+    l.Display("输入祖先：");
+    cin >> ancestor;
+    l.Display("输入子孙：");
+    cin >> offspring;
+    i = offspring;
+    while(i != 0) {
+        if(T[i] == ancestor) {
+            cout << "yes" << endl;
+            return 0;
+        } else {
+            i = T[i];
+        }
+    }
+    cout << "no" << endl;
+
+    int ancestor, offspring, i;
+    int L[] = {0, 2, 4, 6, 8, 10, 12, 14};
+    int R[] = {0, 3, 5, 7, 9, 11, 13, 15};
+    Luxiaotong l;
+    queue<int>q;
+    l.Display("输入祖先：");
+    cin >> ancestor;
+    l.Display("输入子孙：");
+    cin >> offspring;
+    for(i = ancestor; i < sizeof(L)/sizeof(int);) {
+        if(L[i] == offspring || R[i] == offspring) {
+            cout << "yes";
+            return 0;
+        } else {
+            q.push(L[i]);
+            q.push(R[i]);
+            i = q.front();
+            q.pop();
+        }
+    }
+    cout << "no";
+
     BiTNode * T = NULL;
     BiTree bt;
     Luxiaotong l;
     T = bt.CreateBiTree();
     //bt.PreOrderTraverseNoRec(T);
     //bt.InOrderTraverseNoRec(T);
-    bt.PostOrderTraverseNoRec(T);
+    //bt.PostOrderTraverseNoRec(T);
+    bt.LevelOrderTraverse(T);
     //cout << T->data << endl;
     //cout << T->lchild->data << endl;
     //cout << T->rchild->data << endl;
-    /*
+
     BiTNode * T = NULL;
     BiTree bt;
     Luxiaotong l;

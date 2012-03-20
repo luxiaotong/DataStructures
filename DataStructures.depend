@@ -11,11 +11,9 @@
 1331391172 d:\code\datastructures\include\stack.h
 	"Global.h"
 
-1331478547 source:d:\code\datastructures\main.cpp
+1332251387 source:d:\code\datastructures\main.cpp
 	<iostream>
-	<cstring>
 	"Global.h"
-	"Stack.h"
 	"Luxiaotong.h"
 	"BiTree.h"
 
@@ -47,14 +45,18 @@
 
 1329141582 d:\code\datastructures\include\sequence.h
 
-1331478520 source:d:\code\datastructures\src\bitree.cpp
+1332251364 source:d:\code\datastructures\src\bitree.cpp
 	"BiTree.h"
 
-1331391124 d:\code\datastructures\include\bitree.h
+1332252336 d:\code\datastructures\include\bitree.h
 	"Global.h"
 	"Stack.h"
 	<iostream>
-	<cstring>
 
-1331391078 d:\code\datastructures\include\global.h
+1332240427 d:\code\datastructures\include\global.h
+	<cstring>
+	<queue>
+	<stack>
+	<iomanip>
+	<stdio.h>
 

@@ -2,13 +2,13 @@
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
 	<File name="include\BiTree.h" open="1" top="0" tabpos="2">
-		<Cursor position="1017" topLine="13" />
+		<Cursor position="422" topLine="9" />
 	</File>
 	<File name="include\CustomString.h" open="0" top="0" tabpos="2">
 		<Cursor position="251" topLine="6" />
 	</File>
-	<File name="include\Global.h" open="0" top="0" tabpos="0">
-		<Cursor position="142" topLine="0" />
+	<File name="include\Global.h" open="1" top="0" tabpos="4">
+		<Cursor position="175" topLine="0" />
 	</File>
 	<File name="include\LinkList.h" open="0" top="0" tabpos="0">
 		<Cursor position="278" topLine="15" />
@@ -22,14 +22,14 @@
 	<File name="include\Sequence.h" open="0" top="0" tabpos="0">
 		<Cursor position="175" topLine="0" />
 	</File>
-	<File name="include\Stack.h" open="1" top="0" tabpos="4">
-		<Cursor position="507" topLine="6" />
+	<File name="include\Stack.h" open="0" top="0" tabpos="4">
+		<Cursor position="163" topLine="9" />
 	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="328" topLine="9" />
+		<Cursor position="375" topLine="5" />
 	</File>
 	<File name="src\BiTree.cpp" open="1" top="1" tabpos="3">
-		<Cursor position="2924" topLine="119" />
+		<Cursor position="7659" topLine="317" />
 	</File>
 	<File name="src\CustomString.cpp" open="0" top="0" tabpos="3">
 		<Cursor position="6654" topLine="278" />
@@ -40,7 +40,7 @@
 	<File name="src\Luxiaotong.cpp" open="0" top="0" tabpos="4">
 		<Cursor position="1317" topLine="29" />
 	</File>
-	<File name="src\Stack.cpp" open="1" top="0" tabpos="5">
-		<Cursor position="872" topLine="11" />
+	<File name="src\Stack.cpp" open="0" top="0" tabpos="5">
+		<Cursor position="62" topLine="0" />
 	</File>
 </CodeBlocks_layout_file>
