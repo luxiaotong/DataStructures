@@ -7,6 +7,8 @@ using namespace std;
 
 int main()
 {
+
+    /*
     char data[MAXSIZE];
     FILE *fp = fopen("D:\\Program Files\\EasyPHP-5.3.5.0\\php\\php.ini-development", "r");
     fread(data, sizeof(char), MAXSIZE, fp);
@@ -20,7 +22,7 @@ int main()
     //cout << T->data << endl;
     //cout << T->lchild << endl;
     //cout << T->rchild << endl;
-    /*
+
     BiTNode * T = NULL;
     BiTree bt;
     int count = 0;

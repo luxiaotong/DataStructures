@@ -35,3 +35,29 @@ char * Sequence :: compare_12(IntType arrA[], IntType arrB[])
     }
     return "";
 }
+
+//约瑟夫环
+void Sequence::Josephus(int num, int start, int out)
+{
+    int i = 0;
+    int arr[num];
+    int k = num;
+    int id = start;
+    for(i = 0; i < num; i++) {
+        arr[i] = i + 1;
+    }
+    i = 1;
+    while(1) {
+        if(i % out == 0) {
+            Kickout(&$arr, id);
+            i --;
+            k --;
+        }
+        i ++;
+        if(id == k) {
+            id = 0;
+        } else {
+            id ++;
+        }
+    }
+}

@@ -42,7 +42,7 @@ class BiTree
         bool BSTSearch(BSTNode * T, TreeType data, BSTNode * f, BSTNode *&p);                    //动态查找树
         void BSTCreate(BSTNode * &T, char *data);                      //动态创建查找树
         void BSTDisplay(BSTNode * T);                                          //显示查找树结果
-        void BSTInsert(BSTNode * &T, char * data);
+        void BSTInsert(BSTNode * &T, char * data);                      //动态创建查找树
 };
 
 #endif // BITREE_H

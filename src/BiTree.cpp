@@ -308,6 +308,7 @@ void BiTree::BSTDisplay(BSTNode * T)
     }
 }
 
+//动态创建查找树
 void BiTree::BSTInsert(BSTNode * &root, char *data)
 {
     int i = 0;
